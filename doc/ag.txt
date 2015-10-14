@@ -154,8 +154,16 @@ A custom command used to set key mappings for the quickfix window. Default:
 Whether or not to show the message explaining the extra mappings that are
 added to the results list this plugin populates. This message is not shown if
 the mappings are not applied (see |g:ag_apply_qmappings| and
-|g:ag_apply_lmappings| for more info. Default 1. Example: >
+|g:ag_apply_lmappings| for more info). Default 1. Example: >
   let g:ag_mapping_message=0
+<
+
+                                                    *g:ag_mapping_message_text*
+A custom message string to display when the results list window opens
+(see |g:ag_mapping_message| and for more info). Default "ag.vim keys: q=quit
+<cr>/e/t/h/v=enter/edit/tab/split/vsplit go/T/H/gv=preview versions of same".
+Example: >
+  let g:ag_mapping_message="Press q to close results list"
 <
 
 ==============================================================================
