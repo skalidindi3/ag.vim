@@ -55,6 +55,10 @@ if !exists("g:ag_mapping_message")
   let g:ag_mapping_message=1
 endif
 
+if !exists("g:ag_mapping_message_text")
+  let g:ag_mapping_message_text="ag.vim keys: q=quit <cr>/e/t/h/v=enter/edit/tab/split/vsplit go/T/H/gv=preview versions of same"
+endif
+
 if !exists("g:ag_working_path_mode")
     let g:ag_working_path_mode = 'c'
 endif
@@ -178,7 +182,7 @@ function! ag#Ag(cmd, args)
       exe l:ag_mapping_func
 
       if g:ag_mapping_message
-        echom "ag.vim keys: q=quit <cr>/e/t/h/v=enter/edit/tab/split/vsplit go/T/H/gv=preview versions of same"
+        echom g:ag_mapping_message_text
       endif
     endif
   else
