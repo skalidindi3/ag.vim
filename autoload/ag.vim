@@ -165,7 +165,7 @@ function! ag#Ag(cmd, args)
       " <C-w>J                                              Slam the quickfix/location list window against the bottom edge
       " :exe printf(":normal %d\<lt>c-w>_", b:height)<CR>   Restore the quickfix/location list window's height from before we opened the match
 
-      if g:ag_mapping_message && l:apply_mappings
+      if g:ag_mapping_message
         echom "ag.vim keys: q=quit <cr>/e/t/h/v=enter/edit/tab/split/vsplit go/T/H/gv=preview versions of same"
       endif
     endif
