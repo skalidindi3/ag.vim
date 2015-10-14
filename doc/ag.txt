@@ -138,6 +138,18 @@ window is opened, or what size it is. Example: >
   let g:ag_qhandler="copen 20"
 <
 
+                                                           *g:ag_lmapping_func*
+A custom command used to set key mappings for the location list. Default:
+"call ag#AgSetDefaultMappings('l')". Example: >
+  let g:ag_qhandler="call AgSetMyCustomMappings()"
+<
+
+
+                                                           *g:ag_qmapping_func*
+A custom command used to set key mappings for the quickfix window. Default:
+"call ag#AgSetDefaultMappings('c')". Example: >
+  let g:ag_qhandler="call AgSetMyCustomMappings()"
+<
                                                          *g:ag_mapping_message*
 Whether or not to show the message explaining the extra mappings that are
 added to the results list this plugin populates. This message is not shown if
@@ -147,7 +159,7 @@ the mappings are not applied (see |g:ag_apply_qmappings| and
 <
 
 ==============================================================================
-MAPPINGS                                                         *ag-mappings*
+DEFAULT MAPPINGS                                                 *ag-mappings*
 
 The following keyboard shortcuts are available in the quickfix window:
 
